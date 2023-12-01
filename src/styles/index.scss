@@ -1,0 +1,29 @@
+$static-font-path: '/assets/fonts/webfonts';
+
+@import 'node_modules/@salesforce-ux/design-system/scss/index';
+@import 'footer';
+@import 'state';
+
+.app-landing {
+	background-color: #fff;
+}
+
+// Push down the global navigation below the header using a placeholder element
+.app-header-placeholder {
+	// A note on Design Tokens in Sass:
+	//
+	// $height-header is a Sass variable pointing to a Design Token
+	// Design tokens are listed at:
+	// https://www.lightningdesignsystem.com/design-tokens/
+	//
+	// This is how you leverage Design Tokens in Sass:
+	height: $height-header;
+}
+
+// Wrap the prototype in a scrollable container
+.app-wrapper {
+	inset: $height-context-bar + $height-header 0 0 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+}
