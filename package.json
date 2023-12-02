@@ -16,7 +16,7 @@
     "gulp",
     "nunjucks"
   ],
-  "main": "server.js",
+  "main": "",
   "engines": {
     "node": "20.x"
   },
