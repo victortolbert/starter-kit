@@ -4,12 +4,12 @@
   "packageManager": "pnpm@8.11.0",
   "description": "Rapidly build prototypes using Gulp and Nunjucks",
   "author": "Victor Tolbert <victor.tolbert@gmail.com> (http://victortolbert.com/)",
+  "license": "MIT",
   "homepage": "https://starter-kit.victortolbert.com",
   "repository": "https://github.com/victortolbert/starter-kit",
   "bugs": {
     "url": "https://github.com/victortolbert/starter-kit/issues"
   },
-  "license": "MIT",
   "keywords": [
     "design-system",
     "starter",
@@ -17,6 +17,9 @@
     "nunjucks"
   ],
   "main": "server.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "test": "gulp",
     "dev": "gulp",
@@ -37,6 +40,9 @@
     "@salesforce-ux/design-system": "^2.22.2"
   },
 
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.1.2",
     "@commitlint/cli": "^18.4.3",
@@ -86,7 +92,6 @@
     "simple-git-hooks": "^2.9.0",
     "stylelint": "^15.11.0",
     "stylelint-8-point-grid": "^2.2.0",
-    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-recommended-vue": "1.5.0",
@@ -103,9 +108,6 @@
     "uglify-js": "^3.17.4",
     "util": "^0.12.5"
   },
-  "optionalDependencies": {
-    "fsevents": "*"
-  },
   "simple-git-hooks": {
     "commit-msg": "pnpm commitlint --edit $1",
     "pre-commit": "pnpm lint-staged"
@@ -117,4 +119,5 @@
   "browserslist": [
     "Edge 16"
   ]
+
 }
