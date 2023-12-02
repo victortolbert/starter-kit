@@ -1,6 +1,7 @@
 const process = require('node:process')
 const express = require('express')
 
+const app = express()
 const auth = require('http-auth')
 
 const port = process.env.PORT || 3000
