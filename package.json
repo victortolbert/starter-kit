@@ -18,14 +18,16 @@
   ],
   "main": "",
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "npm": "10.x"
   },
   "scripts": {
     "test": "gulp",
     "dev": "gulp",
     "build": "gulp build",
     "clean": "gulp clean",
-    "prestart": "gulp build && node server",
+    "start": "node server",
+    "prestart": "npm run build",
     "lint:styles": "stylelint src/styles/**/*.{css,scss} --fix --ignore-path .gitignore",
     "lint:js": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -83,6 +85,7 @@
     "gulp-uglify": "^3.0.2",
     "json5": "^2.2.3",
     "lint-staged": "^15.1.0",
+    "pnpm": "8.11.0",
     "postcss-lit": "^1.1.0",
     "release-it": "^17.0.0",
     "rollup": "^4.6.1",
