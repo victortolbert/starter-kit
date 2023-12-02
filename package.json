@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "@salesforce-ux/design-system": "^2.22.2",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "http-auth": "^4.2.0"
   },
   "optionalDependencies": {
     "fsevents": "*"
@@ -80,7 +81,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "http-auth": "^4.2.0",
     "json5": "^2.2.3",
     "lint-staged": "^15.1.0",
     "postcss-lit": "^1.1.0",
