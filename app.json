@@ -1,6 +1,6 @@
 {
   "name": "Starter Kit",
-  "description": "A rapid prototyping environment using the Salesforce Lightning Design System.",
+  "description": "Rapidly build prototypes using Gulp and Nunjucks",
   "keywords": [
     "design-system",
     "starter",

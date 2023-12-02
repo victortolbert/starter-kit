@@ -1,21 +1,25 @@
 const process = require('node:process')
 const express = require('express')
-
-const app = express()
 const auth = require('http-auth')
 
+const app = express()
 const port = process.env.PORT || 3000
 
 const basic = auth.basic({
-  realm: 'Salesforce Lightning Design System Prototype',
-}, (username, password, next) => {
-  next(username === process.env.USERNAME && password === process.env.PASSWORD)
+  realm: 'Starter Kit',
+}, (username, password, callback) => {
+  callback(username === process.env.USERNAME && password === process.env.PASSWORD)
 })
 
-if (process.env.USERNAME && process.env.PASSWORD)
-  app.use(auth.connect(basic))
+// Use the basic auth middleware directly
+if (process.env.USERNAME && process.env.PASSWORD) {
+  app.use((req, res, next) => {
+    basic.check(req, res, next)
+  })
+}
 
 app.use('/', express.static('./dist'))
 
-app.listen(port, () =>
-  console.log(`Listening on port ${port}!\n\nDeveloping locally? Run "npm run dev" instead.`))
+app.listen(port, () => {
+  console.log(`Listening on port ${port}!\n\nDeveloping locally? Run "npm run dev" instead.`)
+})
