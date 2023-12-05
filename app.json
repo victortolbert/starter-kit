@@ -9,7 +9,7 @@
   ],
   "website": "https://github.com/victortolbert/starter-kit",
   "repository": "https://github.com/victortolbert/starter-kit",
-  "logo": "https://starter-kit-demo.herokuapp.com/assets/logo.svg",
+  "logo": "https://assets.victortolbert.com/logo.svg",
   "buildpacks": [
     {
       "url": "heroku/nodejs"

@@ -11,9 +11,11 @@ Where you may put all your scripts.
 Load scripts like in classic HTML:
 
 ```html
-  ...
-  <script src="/scripts/my-script.js"></script>
-</body>
+<html>
+  <body>
+    ...
+    <script src="/scripts/my-script.js"></script>
+  </body>
 </html>
 ```
 

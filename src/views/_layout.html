@@ -5,25 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starter Kit</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- Prototype styles -->
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
-    <div
-      class="slds-p-around--large slds-container--center slds-container--small app-landing"
-    >
-      <h1 class="slds-text-heading--large">Starter Kit</h1>
-
-      <p>
-        <a href="/example.html" class="slds-button slds-button--brand"
-          >Example Prototype</a
-        >
-      </p>
-    </div>
-
+    <main class="app-wrapper slds-template_default">
+      {% block content %}
+      <!-- Content from HTML files gets injected here -->
+      {% endblock %}
+    </main>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script>

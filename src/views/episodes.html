@@ -1,0 +1,7 @@
+{% extends "_layout.html" %} {% block content %}
+<ul>
+  {% for episode in episodes %}
+  <li>{{ episode.title }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

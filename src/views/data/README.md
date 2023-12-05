@@ -16,6 +16,7 @@ Data is stored in JSON files named after the HTML page names:
 ## Accessing data in templates
 
 <!--  /src/views/data/shared.json -->
+
 ```json
 {
   "orgName": "Your Org Name"
@@ -23,6 +24,7 @@ Data is stored in JSON files named after the HTML page names:
 ```
 
  <!-- /src/views/data/accounts.json -->
+
 ```json
 {
   "pageTitle": "Account list",
@@ -43,8 +45,8 @@ Data is stored in JSON files named after the HTML page names:
 
 <h1>{{ pageTitle }}</h1>
 <ul>
-{% for account in accounts %}
+  {% for account in accounts %}
   <li>{{ account.name }}</li>
-{% endfor %}
+  {% endfor %}
 </ul>
 ```

@@ -29,7 +29,7 @@
     "prestart": "npm run build && node server",
     "lint:styles": "stylelint src/styles/**/*.{css,scss} --fix --ignore-path .gitignore",
     "lint:js": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "format": "eslint . --fix",
     "lint:debug": "eslint --debug .",
     "check:types": "vue-tsc --noEmit",
     "check:bundle": "npx vite-bundle-visualizer",
@@ -46,11 +46,13 @@
     "fsevents": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.1.2",
+    "@antfu/eslint-config": "^2.3.3",
+    "@antfu/eslint-plugin-prettier": "5.0.1-1",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@types/node": "^20.10.1",
+    "@types/node": "^20.10.3",
+    "@unocss/eslint-config": "^0.58.0",
     "browser-sync": "^2.29.3",
     "changelogen": "^0.5.5",
     "changelogithub": "^0.13.2",
@@ -63,10 +65,13 @@
     "conventional-changelog-cli": "^4.1.0",
     "conventional-github-releaser": "^3.1.5",
     "conventional-recommended-bump": "^9.0.0",
-    "del": "6.1.1",
+    "del": "^6.1.1",
     "delete": "^1.1.0",
     "dotenv": "^16.3.1",
+    "downloadjs": "^1.4.7",
+    "dprint": "^0.43.2",
     "eslint": "^8.55.0",
+    "eslint-plugin-format": "^0.1.0",
     "events": "^3.3.0",
     "execa": "^8.0.1",
     "express": "^4.18.2",
@@ -83,9 +88,10 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "json5": "^2.2.3",
-    "lint-staged": "^15.1.0",
+    "lint-staged": "^15.2.0",
     "pnpm": "8.11.0",
     "postcss-lit": "^1.1.0",
+    "prettier": "^3.1.0",
     "release-it": "^17.0.0",
     "rollup": "^4.6.1",
     "rxjs": "^7.8.1",
@@ -108,6 +114,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.3.2",
     "uglify-js": "^3.17.4",
+    "unocss": "^0.58.0",
     "util": "^0.12.5"
   },
   "simple-git-hooks": {
@@ -115,7 +122,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix",
+    "*": "eslint . --fix",
     "*.{css,vue}": "stylelint"
   },
   "browserslist": [

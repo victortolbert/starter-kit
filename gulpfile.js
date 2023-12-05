@@ -5,7 +5,7 @@ const { basename, resolve } = require('node:path')
 const { parse } = require('json5')
 const { src, dest, parallel, series, task, watch, symlink, lastRun } = require('gulp')
 const browserSync = require('browser-sync')
-const del = require('del')
+const del = require('delete')
 const $ = require('gulp-load-plugins')({
   postRequireTransforms: {
     sass: sass => sass(require('sass')),
@@ -83,6 +83,10 @@ function watchFiles() {
     open: false,
     notify: false,
     server: 'dist',
+    port: 8081,
+    ui: {
+      port: 8181,
+    },
   })
 
   watch('src/styles/**/*.scss', styles)
