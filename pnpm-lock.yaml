@@ -127,8 +127,8 @@ devDependencies:
     specifier: ^2.0.8
     version: 2.0.8
   gulp-nunjucks:
-    specifier: 5.1.0
-    version: 5.1.0(gulp@4.0.2)
+    specifier: 6.0.0
+    version: 6.0.0(gulp@4.0.2)
   gulp-plumber:
     specifier: ^1.2.1
     version: 1.2.1
@@ -1800,11 +1800,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /@sindresorhus/is@3.1.2:
-    resolution: {integrity: sha512-JiX9vxoKMmu8Y3Zr2RVathBL1Cdu4Nt4MuNWemt1Nc06A0RAin9c5FArkhGsyMBWfCu4zj+9b+GxtjAnE4qqLQ==}
-    engines: {node: '>=10'}
-    dev: true
-
   /@sindresorhus/is@5.6.0:
     resolution: {integrity: sha512-TV7t8GKYaJWsn00tFDqBw8+Uqmr8A0fRU1tvTQhyZzGv0sJCGRQL3JGMI3ucuKo3XIZdUP+Lx7/gh2t3lewy7g==}
     engines: {node: '>=14.16'}
@@ -1970,6 +1965,10 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
+  /@types/expect@1.20.4:
+    resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
+    dev: true
+
   /@types/glob@7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
@@ -2056,6 +2055,13 @@ packages:
       '@types/node': 20.10.3
       '@types/unist': 2.0.10
       '@types/vfile-message': 2.0.0
+    dev: true
+
+  /@types/vinyl@2.0.11:
+    resolution: {integrity: sha512-vPXzCLmRp74e9LsP8oltnWKTH+jBwt86WgRUb4Pc9Lf3pkMVGyvIo2gm9bODeGfCay2DBB/hAWDuvf07JcK4rw==}
+    dependencies:
+      '@types/expect': 1.20.4
+      '@types/node': 20.10.3
     dev: true
 
   /@typescript-eslint/eslint-plugin@6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.3.2):
@@ -4952,6 +4958,11 @@ packages:
       lodash: 4.17.21
     dev: true
 
+  /easy-transform-stream@1.0.1:
+    resolution: {integrity: sha512-ktkaa6XR7COAR3oj02CF3IOgz2m1hCaY3SfzvKT4Svt2MhHw9XCt+ncJNWfe2TGz31iqzNGZ8spdKQflj+Rlog==}
+    engines: {node: '>=14.16'}
+    dev: true
+
   /eazy-logger@4.0.1:
     resolution: {integrity: sha512-2GSFtnnC6U4IEKhEI7+PvdxrmjJ04mdsj3wHZTFiw0tUtG4HCWzTr13ZYTk8XOGnA1xQMaDljoBOYlk3D/MMSw==}
     engines: {node: '>= 0.8.0'}
@@ -6950,22 +6961,29 @@ packages:
       minimatch: 3.1.2
     dev: true
 
-  /gulp-nunjucks@5.1.0(gulp@4.0.2):
-    resolution: {integrity: sha512-85prmLsQPIBXa7ROVcnivVHxil7SufT6H+rSezictJuRHmVjjPzJXr67Ajbl/Pf2bLkD+Gq3GWvLI9G0qbxT8w==}
-    engines: {node: '>=8'}
+  /gulp-nunjucks@6.0.0(gulp@4.0.2):
+    resolution: {integrity: sha512-AGeHXnRsXNre6yD3SM8dhOXhrfxsCEBb3SZ7JKXK8bTrIw1jG2BTBKCAr4e4K1ReFTtsHGIZQX93tVoceZ4UrQ==}
+    engines: {node: '>=18'}
     peerDependencies:
       gulp: '>=4'
     peerDependenciesMeta:
       gulp:
         optional: true
     dependencies:
-      '@sindresorhus/is': 3.1.2
       gulp: 4.0.2
+      gulp-plugin-extras: 0.2.2
       nunjucks: 3.2.4
-      plugin-error: 1.0.1
-      through2: 3.0.2
     transitivePeerDependencies:
       - chokidar
+    dev: true
+
+  /gulp-plugin-extras@0.2.2:
+    resolution: {integrity: sha512-0gssXzTNrrOocYBWN4qOZqd03cz3bxhjxVUPZV9iJdBR0ZZbwMQO/OT8hZChYoc9GjKaA5meaqDr6CjkmKA7BA==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@types/vinyl': 2.0.11
+      chalk: 5.3.0
+      easy-transform-stream: 1.0.1
     dev: true
 
   /gulp-plumber@1.2.1:
