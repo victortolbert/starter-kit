@@ -98,7 +98,7 @@
     "sass": "^1.69.5",
     "simple-git": "^3.21.0",
     "simple-git-hooks": "^2.9.0",
-    "stylelint": "^15.11.0",
+    "stylelint": "^16.0.0",
     "stylelint-8-point-grid": "^2.2.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recess-order": "^4.4.0",
