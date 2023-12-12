@@ -1,5 +1,7 @@
 # Starter Kit
 
+> Platform-agnostic templates and interactive components
+
 ## Who is this for?
 
 Whether you're a seasoned prototyper or a seasoned application developer, this
