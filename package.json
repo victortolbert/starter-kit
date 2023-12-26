@@ -69,7 +69,7 @@
     "delete": "^1.1.0",
     "dotenv": "^16.3.1",
     "downloadjs": "^1.4.7",
-    "dprint": "^0.43.2",
+    "dprint": "^0.45.0",
     "eslint": "^8.55.0",
     "eslint-plugin-format": "^0.1.0",
     "events": "^3.3.0",
