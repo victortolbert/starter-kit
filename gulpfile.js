@@ -31,7 +31,7 @@ function getData(file) {
 function assets() {
   return src([
     'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
-    'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
+    'src/assets/**/*.{woff,woff2,txt,jpg,jpeg,png,gif,svg}',
   ], { since: lastRun(assets) })
     .pipe(dest('dist/assets'))
 }

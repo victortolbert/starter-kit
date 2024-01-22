@@ -1,0 +1,61 @@
+// @font-face {
+// 	font-display: optional;
+// 	font-family: 'Open Sans';
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	src: local('Open Sans Light'), local('OpenSans-Light'),
+// 			 url('../assets/fonts/open-sans-v16-latin-300.woff2') format('woff2'),
+// 			 url('../assets/fonts/open-sans-v16-latin-300.woff') format('woff');
+// }
+
+@keyframes honeycomb {
+	0% {color: #451D14}
+	20% {color: #753021}
+	40% {color: #AE673D}
+	60% {color: #DCBD6F}
+	80% {color: #4F7E46}
+	100% {color: #451D14}
+}
+
+body {
+	background: url(../assets/images/background.png) repeat-y #000;
+	color: #FEFEFE;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin-left: 100px;
+	margin-top: 160px;
+}
+
+h1 {
+	animation: honeycomb 12s infinite;
+	color: #4F7E46;
+	font-weight: 300;
+	letter-spacing: -0.08em;
+	line-height: 1.35em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 1.45em;
+	margin-bottom: 2em;
+	margin-top: 0;
+}
+
+a {
+	color: #FEFEFE;
+	text-decoration: none;
+}
+
+ul {
+	font-size: 0.9em;
+	line-height: 1.4em;
+	list-style: none;
+	padding: 0;
+}
+
+h2, ul {
+	text-shadow: 0 0 1px #FEFEFE;
+}
