@@ -105,7 +105,7 @@
     "stylelint-config-recommended-vue": "1.5.0",
     "stylelint-config-slds": "^1.0.8",
     "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^5.3.1",
     "taze": "^0.13.0",
