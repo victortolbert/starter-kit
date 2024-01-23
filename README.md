@@ -13,6 +13,23 @@ This starter kit is built using web standards, specifically HTML and CSS. You
 can easily copy and paste markup from [designcode.net][], making it a breeze to
 start designing in the browser without requiring extensive front-end expertise.
 
+### Developers
+
+- Salesforce
+- Wordpress
+- Vue
+- Alpine.js
+
+## Examples of Current and formerly popular Vue Component API approaches
+
+- Options API
+- Class Component API
+- Composition API
+
+## Component Driven Design
+
+- Develop in isolation
+
 ### Salesforce Developers
 
 Creating a complete demo organization for a quick prototype can be

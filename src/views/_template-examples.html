@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starter Kit</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!--
+      The Tailwind CSS Play CDN is designed for development purposes only,
+      and is not the best choice for production.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Alpine.js - lightweight, JavaScript framework. -->
     <script
@@ -14,25 +19,18 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
 
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
     <!-- Prototype styles -->
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
+
   <body>
-    <div
-      class="slds-p-around--large slds-container--center slds-container--small app-landing"
-    >
-      <p>
-        <a href="/salesforce.html" class="slds-button slds-button--brand">
-          Salesforce Prototype
-        </a>
-      </p>
-    </div>
-
-    <div x-data="{ open: false }">
-      <button @click="open = true">Expand</button>
-
-      <span x-show="open"> Content... </span>
-    </div>
+    <main class="app-wrapper slds-template_default">
+      {% block content %}
+      <!-- Content from HTML files gets injected here -->
+      {% endblock %}
+    </main>
 
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>

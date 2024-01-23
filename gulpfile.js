@@ -12,6 +12,19 @@ const $ = require('gulp-load-plugins')({
   },
 })
 
+// https://www.npmjs.com/package/gulp-theo
+// const theo = require('gulp-theo')
+
+// // Transform design/props.yml to dist/props.scss:
+// gulp.task('tokens:scss', () =>
+//   gulp.src('design/props.yml')
+//     .pipe(theo({
+//       transform: { type: 'web' },
+//       format: { type: 'scss' }
+//     }))
+//     .pipe(gulp.dest('dist'))
+// )
+
 const getSharedData = () => parse(readFileSync('./src/views/data/shared.json', 'utf8'))
 
 function getData(file) {
@@ -83,9 +96,9 @@ function watchFiles() {
     open: false,
     notify: false,
     server: 'dist',
-    port: 8081,
+    port: 8587,
     ui: {
-      port: 8181,
+      port: 8586,
     },
   })
 
