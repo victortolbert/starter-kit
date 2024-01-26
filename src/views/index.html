@@ -30,13 +30,27 @@
           </a>
         </p>
       </div>
+
       <h2>Examples</h2>
+
       <ul class="list-disc list-inside">
-        <li>
-          <a href="/examples/text-cycle-animation.html">Text Cycle Animation</a>
-        </li>
         <li><a href="/examples/theming.html">Theming</a></li>
       </ul>
+
+      <h3>Animation</h3>
+
+      <ul class="list-disc list-inside">
+        <li>
+          <a href="/examples/animation/text-fade.html">Text Fade</a>
+        </li>
+        <li>
+          <a href="/examples/animation/text-cycle.html">Text Cycle</a>
+        </li>
+        <li>
+          <a href="/examples/animation/text-typing.html">Text Typing</a>
+        </li>
+      </ul>
+
       <div x-data="{ open: false }">
         <button @click="open = true">Expand</button>
         <span x-show="open"> Content... </span>

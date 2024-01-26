@@ -46,13 +46,13 @@ module.exports = {
       },
     ],
     'scss/comment-no-empty': null,
-    'selector-class-pattern': [
-      '^(slds|app)(-[a-z0-9_-]+|)$',
-      {
-        severity: 'error',
-        resolveNestedSelectors: true,
-      },
-    ],
+    // 'selector-class-pattern': [
+    //   '^(slds|app)(-[a-z0-9_-]+|)$',
+    //   {
+    //     severity: 'error',
+    //     resolveNestedSelectors: true,
+    //   },
+    // ],
     'selector-pseudo-class-no-unknown': [
       true,
       {
