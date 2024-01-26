@@ -1,0 +1,39 @@
+:root {
+  --mainColor: #f06d06;
+}
+h1 {
+  background: var(--mainColor);
+  margin: 0;
+  padding: 1rem;
+  color: white;
+}
+.subtitle {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))
+    var(--mainColor);
+}
+
+main {
+  padding: 1rem;
+}
+
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+html,
+body {
+  height: 100%;
+}
+main {
+  flex: 1;
+}
+footer {
+  background: var(--mainColor);
+  padding: 1rem;
+}

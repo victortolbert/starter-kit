@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="robots" content="noindex, nofollow" />
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Alpine.js - lightweight, JavaScript framework. -->
     <script
       defer
@@ -18,21 +20,28 @@
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
-    <div
-      class="slds-p-around--large slds-container--center slds-container--small app-landing"
-    >
-      <p>
-        <a href="/salesforce.html" class="slds-button slds-button--brand">
-          Salesforce Prototype
-        </a>
-      </p>
-    </div>
-
-    <div x-data="{ open: false }">
-      <button @click="open = true">Expand</button>
-
-      <span x-show="open"> Content... </span>
-    </div>
+    <main class="p-16">
+      <div
+        class="slds-p-around--large slds-container--center slds-container--small app-landing"
+      >
+        <p>
+          <a href="/salesforce.html" class="slds-button slds-button--brand">
+            Salesforce Prototype
+          </a>
+        </p>
+      </div>
+      <h2>Examples</h2>
+      <ul class="list-disc list-inside">
+        <li>
+          <a href="/examples/text-cycle-animation.html">Text Cycle Animation</a>
+        </li>
+        <li><a href="/examples/theming.html">Theming</a></li>
+      </ul>
+      <div x-data="{ open: false }">
+        <button @click="open = true">Expand</button>
+        <span x-show="open"> Content... </span>
+      </div>
+    </main>
 
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>

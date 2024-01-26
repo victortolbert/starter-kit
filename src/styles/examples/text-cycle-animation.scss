@@ -1,0 +1,82 @@
+body {
+  background: #002b36;
+  font-family: helvetica, opensans, arial;
+  font-size: 15px;
+}
+
+.text-fader {
+  margin: 50px 0 0 40px;
+  .text-content {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+
+    span {
+      &.line {
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-duration: 0.8s;
+        display: none;
+      }
+      &.colour {
+        .letter {
+          color: #fff;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+
+    &.in {
+      span {
+        &.line {
+          animation-name: textFaderIn;
+          display: block;
+        }
+
+        &.colour {
+          &.go {
+            .letter {
+              color: #aed139;
+              @for $i from 1 through 30 {
+                &:nth-child(#{$i}) {
+                  transition-delay: (0.07 * $i) + s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.out {
+      span {
+        &.line {
+          animation-name: textFaderOut;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes textFaderIn {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFaderOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+}

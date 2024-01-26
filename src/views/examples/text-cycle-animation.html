@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal site of Victor Tolbert" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Examples - Text Cycle Animation</title>
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="stylesheet" href="/styles/examples/text-cycle-animation.css" />
+    <link
+      rel="pingback"
+      href="https://webmention.io/victortolbert.com/xmlrpc"
+    />
+    <link
+      rel="webmention"
+      href="https://webmention.io/victortolbert.com/webmention"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body class="vcard">
+    <div class="text-fader">
+      <div class="text-content">
+        <span class="line"
+          >It’s what <span class="colour">drives us.</span></span
+        >
+        <span class="line">Because when you thrive,</span>
+        <span class="line">we <span class="colour">thrive.</span></span>
+      </div>
+
+      <div class="text-content">
+        <span class="line">Lorem ipsum dolor sit amet,</span>
+        <span class="line"
+          >consectetur <span class="colour">adipisicing</span> elit,</span
+        >
+        <span class="line">sed do eiusmod</span>
+      </div>
+    </div>
+
+    <script src="/scripts/examples/text-cycle-animation.js"></script>
+
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        'script',
+        '//www.google-analytics.com/analytics.js',
+        'ga',
+      )
+
+      ga('create', 'UA-76464598-2', 'auto')
+      ga('send', 'pageview')
+    </script>
+  </body>
+</html>
