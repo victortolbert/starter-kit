@@ -1,292 +1,635 @@
-{% extends "_template-resume.html" %}
-{% block content %}
-<main class="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-    <section class="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div class="flex items-center justify-between">
-            <div class="flex-1 space-y-1.5">
-                <h1 class="text-2xl font-bold">
-                  Thomas Davis
-                </h1>
-                <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-                  Web Developer
-                </p>
-                <p class="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
-                  <span class="inline-flex gap-x-1.5 align-baseline leading-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-3 w-3">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                            <path d="M2 12h20"></path>
-                        </svg>Melbourne, AU</span>
-                </p>
-                <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden"><a href="mailto:thomasalwyndavis@gmail.com" aria-label="Email thomasalwyndavis@gmail.com" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg></a><a href="https://twitter.com/ajaxdavis" aria-label="Go to twitter profile" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
-                            <title>X</title>
-                            <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
-                        </svg></a><a href="https://github.com/thomasdavis" aria-label="Go to github profile" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
-                            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                        </svg></a></div>
-                <div class="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex"><a href="mailto:thomasalwyndavis@gmail.com"><span class="underline">thomasalwyndavis@gmail.com</span></a></div>
-            </div><span class="relative flex shrink-0 overflow-hidden rounded-xl h-28 w-28"><img class="aspect-square h-full w-full" alt="Thomas Davis" src="https://avatars0.githubusercontent.com/u/416209?s=460&amp;u=38f220a2c9c658141804f881c334c594eb1642ac&amp;v=4"></span>
+{% extends "_template-resume.html" %} {% block content %}
+<main
+  class="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16"
+>
+  <section class="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+    <div class="flex items-center justify-between">
+      <div class="flex-1 space-y-1.5">
+        <h1 class="text-2xl font-bold">Thomas Davis</h1>
+        <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+          Web Developer
+        </p>
+        <p
+          class="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground"
+        >
+          <span class="inline-flex gap-x-1.5 align-baseline leading-none"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-globe h-3 w-3"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path></svg
+            >Melbourne, AU</span
+          >
+        </p>
+        <div
+          class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden"
+        >
+          <a
+            href="mailto:thomasalwyndavis@gmail.com"
+            aria-label="Email thomasalwyndavis@gmail.com"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-mail h-4 w-4"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path
+                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+              ></path></svg></a
+          ><a
+            href="https://twitter.com/ajaxdavis"
+            aria-label="Go to twitter profile"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"
+            ><svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+            >
+              <title>X</title>
+              <path
+                fill="currentColor"
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+              ></path></svg></a
+          ><a
+            href="https://github.com/thomasdavis"
+            aria-label="Go to github profile"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8"
+            ><svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+            >
+              <path
+                fill="currentColor"
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              ></path></svg
+          ></a>
         </div>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">About</h2>
-            <p class="text-pretty font-mono text-sm text-muted-foreground">I'm a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am used to wearing many hats. I am a very product focussed developer who prioritizes user feedback first and foremost. I'm generally very flexible when investigating new roles. </p>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">Work Experience</h2>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Tokenized</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2020 - Present</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Senior Javascript Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.<ul class="mt-2 list-inside list-disc">
-                        <li>React</li>
-                        <li>Redux</li>
-                        <li>SCSS</li>
-                        <li>Product</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Blockbid</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2018 - 2020</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Senior Javascript Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.<ul class="mt-2 list-inside list-disc">
-                        <li>React, Apollo, Styled Components</li>
-                        <li>Node.js / Rails</li>
-                        <li>Docker / Heroku / GCP</li>
-                        <li>Used Figma for design and UX work</li>
-                        <li>Optimizing markets with tens of millions of rows using SQL.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Listium</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2016 - 2018</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)<ul class="mt-2 list-inside list-disc">
-                        <li>Worked with Postgres, Redis and Dynamodb for storage.</li>
-                        <li>Hosted on a mixture of Heroku Apps and EC2 servers.</li>
-                        <li>Caching by Fastly and Cloudflare</li>
-                        <li>Hybrid app supported on all platforms</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Cdnjs</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2011 - Present</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Co-Founder</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Following Google's CDN for jQuery, we decided to start a CDN for the less popular Javascript frameworks. The CDN is community moderated and open source on GitHub. We secured a partnership with Cloudflare who now supports the infrastructure.<ul class="mt-2 list-inside list-disc">
-                        <li>Millions of sites use the CDN in production</li>
-                        <li>Larger market share than Yahoo's, Microsoft's and Google's javascript content distribution networks</li>
-                        <li>We serve hundreds of billions request a month</li>
-                        <li>Contains over 3000 popular Javascript libraries</li>
-                        <li>Millions of developers visit the site per year</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Electronic Frontier Foundation</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2014 - 2016</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Hired to take EFF's campaigning to the next level by building an action centre in Ruby on Rails. The action centre is built around some large open source tools that lower the barrier to entry when contacting congress.<ul class="mt-2 list-inside list-disc">
-                        <li>Developed new tools for contacting congress</li>
-                        <li>Brainstormed campaign ideas to raise maximum awareness about issues</li>
-                        <li>Lots of social networking integration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Earbits</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2013 - 2015</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">CTO</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Started off as a front end developer but took on the role of CTO in early 2013. The application frontend is built with Javascript and organized as a single page application that talks to a collection of Rails web servers which are connected to MongoDB.<ul class="mt-2 list-inside list-disc">
-                        <li>Managed a small team of developers and designers</li>
-                        <li>Built the entire frontend application with Backbone.js</li>
-                        <li>Transferred all of the infrastructure from Heroku to AWS</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">JSON Resume</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2014 - Present</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Founder</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">JSON Resume is a community driven open source initiative to create a JSON based standard for resumes. There is no reason why there can't be a common standard for writing a resume that can be extended with an ecosystem of open source tools.<ul class="mt-2 list-inside list-disc">
-                        <li>This resume is built with JSON Resume</li>
-                        <li>Over 3000 stars on Github</li>
-                        <li>Community developed themes</li>
-                        <li>Tens of thousands of users</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Taskforce.is</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2013 - 2016</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Worked on many politically charged campaigns against mass surveillance. Not only technically challenging work but also a lot of networking and getting my hands dirty with politics. Our biggest project was "TheDayWeFightBack"..<ul class="mt-2 list-inside list-disc">
-                        <li>Generated 37,000,000 banner views</li>
-                        <li>100, 000 phone calls to congress</li>
-                        <li>500, 000 emails</li>
-                        <li>250, 000 signatures</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Drone Hire</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2013 - Present</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Co-Founder</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">An international directory of civilian drone / UAV operators for hire. Services include aerial photography, aerial video, mapping, surveying, precision agriculture, real estate photography, remote inspections and infrared imaging. Our plan is to be the place to go when looking for UAV/Drone services. The website is built in Backbone.js and API is built with Node.js and Postgres. <ul class="mt-2 list-inside list-disc">
-                        <li>The site and blog combined have managed to receive over 200,000 visitors in 2014.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">BackboneTutorials.com</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2011 - 2014</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Founder</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">I write tutorials and blog post regarding the popular Javascript framework Backbone.js. The tutorials cover a range of topics regarding front end development aimed at beginners, experts and anyone in between.<ul class="mt-2 list-inside list-disc">
-                        <li>Over two million unique visitors a year</li>
-                        <li>25,000+ ebook downloads</li>
-                        <li>300,000+ Youtube views</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"><a class="hover:underline">Ephox</a><span class="inline-flex gap-x-1"></span></h3>
-                        <div class="text-sm tabular-nums text-gray-500">2011 - 2012</div>
-                    </div>
-                    <h4 class="font-mono text-sm leading-none">Front-end Developer</h4>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Ephox is a worldwide company who is heavily involved with the development of TinyMce and enterprise editors. My primary role included building front-end widgets and applications. Worked on a major product using Backbone.js as a base. Heavily involved in UI/UX design and wire-framing. Also spend a lot of time designing API specifications and documentation.</div>
-            </div>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">Education</h2>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="font-semibold leading-none">The University of Queensland</h3>
-                        <div class="text-sm tabular-nums text-gray-500">2008 - 2009</div>
-                    </div>
-                </div>
-                <div class="text-pretty font-mono text-sm text-muted-foreground mt-2">
-                    <div>Bachelors<!-- -->, <!-- -->Software Engineering (incomplete)</div>
-                </div>
-            </div>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">Skills</h2>
-            <div class="flex flex-wrap gap-1">
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Frontend</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">HTML / JSX</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">SCSS / CSS / BEM / Styled Components</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Javascript / Typescript</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">React / Next</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Redux / Apollo</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Backend</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Node</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Ruby</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Python</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Postgres</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Redis</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Serverless</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Devops</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">AWS</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">G Cloud</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Heroku</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">Caching</div>
-            </div>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">Awards</h2>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 text-base">
-                        <h3 class="font-semibold leading-none">Defender of the Internet</h3>
-                    </div>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Fight For The Future<!-- --> </div>
-            </div>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">Interests</h2>
-            <div class="flex flex-wrap gap-1">
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Gardening</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Music / Jamming</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Reading / Writing</div>
-                <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs">Open Source</div>
-            </div>
-        </section>
-        <section class="flex min-h-0 flex-col gap-y-3">
-            <h2 class="text-xl font-bold">References</h2>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <h3 class="font-semibold leading-none">Joey Flores, Co-founder and CEO of Earbits, Inc.</h3>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.</div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <h3 class="font-semibold leading-none">Yotam Rosenbaum, SVP of Operations, Earbits, Inc.</h3>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">I've had the great pleasure of working with Thomas for the past three years at Earbits, and on a few side projects. Two years ago our CTO left on a moment's notice, Thomas saved our company by quickly stepping up to fill this role. He has been with our company through thick and thin and made serious personal sacrifices in order to help the company during tough times. He is a phenomenal hacker and a true team player. Highly recommended!</div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <h3 class="font-semibold leading-none">Ryan Kirkman, Senior Software Engineer at Nerdwallet</h3>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">Thomas is an extremely talented engineer with a very broad range of skills and experience. From being a thought leader in the front-end community via backbonetutorials.com and cdnjs.com, to designing and implementing the API for cdnjs.com, working with Thomas has been fantastic learning experience. Thomas is truly a full stack develop, and his work output is incredible. If there is any opportunity to work with Thomas, I take it. He is the definition of an A player.</div>
-            </div>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <h3 class="font-semibold leading-none">Greg Davis</h3>
-                </div>
-                <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">On Thomas Davis... Hire this guy. Do not be fooled. Incredibly capable and fast. Plays well with others. Unbelievable at front-end work end programming but that is just the start. Visionary. Hire him before I do.</div>
-            </div>
-        </section>
+        <div
+          class="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex"
+        >
+          <a href="mailto:thomasalwyndavis@gmail.com"
+            ><span class="underline">thomasalwyndavis@gmail.com</span></a
+          >
+        </div>
+      </div>
+      <span class="relative flex shrink-0 overflow-hidden rounded-xl h-28 w-28"
+        ><img
+          class="aspect-square h-full w-full"
+          alt="Thomas Davis"
+          src="https://avatars0.githubusercontent.com/u/416209?s=460&amp;u=38f220a2c9c658141804f881c334c594eb1642ac&amp;v=4"
+      /></span>
+    </div>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">About</h2>
+      <p class="text-pretty font-mono text-sm text-muted-foreground">
+        I'm a full stack web developer who can build apps from the ground up.
+        I've worked mostly at startups so I am used to wearing many hats. I am a
+        very product focussed developer who prioritizes user feedback first and
+        foremost. I'm generally very flexible when investigating new roles.
+      </p>
     </section>
-    <p class="fixed bottom-0 left-0 right-0 border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden">Press<!-- --> <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100"><span class="text-xs">⌘</span>J</kbd> <!-- -->to open the command menu. Hosted by <a href="/" class="underline hover:opacity-80">jcv</a>.</p>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">Work Experience</h2>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Tokenized</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2020 - Present</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">
+            Senior Javascript Developer
+          </h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Tokenized is a Bitcoin wallet for issuing, managing and trading
+          digital tokens. I built out the front end which was packaged as an
+          electron app. It was a difficult frontend to build because we store
+          the users keys locally and used them to sign transactions and
+          contracts.
+          <ul class="mt-2 list-inside list-disc">
+            <li>React</li>
+            <li>Redux</li>
+            <li>SCSS</li>
+            <li>Product</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Blockbid</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2018 - 2020</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">
+            Senior Javascript Developer
+          </h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Blockbid is an Australian crypto currency exchange. I started off on
+          the frontend but eventually became lead tech and worked on every
+          moving piece of the exchange. I really enjoyed working with liquidity
+          providers and connecting their platforms to help us achieve liquid
+          markets.
+          <ul class="mt-2 list-inside list-disc">
+            <li>React, Apollo, Styled Components</li>
+            <li>Node.js / Rails</li>
+            <li>Docker / Heroku / GCP</li>
+            <li>Used Figma for design and UX work</li>
+            <li>Optimizing markets with tens of millions of rows using SQL.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Listium</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2016 - 2018</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Developer</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Built a very large and complex React / Redux application. It works on
+          all platforms and has IOS/Android builds due to it being a PWA.
+          (wrapped it in React Native though only implementing a WebView)
+          <ul class="mt-2 list-inside list-disc">
+            <li>Worked with Postgres, Redis and Dynamodb for storage.</li>
+            <li>Hosted on a mixture of Heroku Apps and EC2 servers.</li>
+            <li>Caching by Fastly and Cloudflare</li>
+            <li>Hybrid app supported on all platforms</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Cdnjs</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2011 - Present</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Co-Founder</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Following Google's CDN for jQuery, we decided to start a CDN for the
+          less popular Javascript frameworks. The CDN is community moderated and
+          open source on GitHub. We secured a partnership with Cloudflare who
+          now supports the infrastructure.
+          <ul class="mt-2 list-inside list-disc">
+            <li>Millions of sites use the CDN in production</li>
+            <li>
+              Larger market share than Yahoo's, Microsoft's and Google's
+              javascript content distribution networks
+            </li>
+            <li>We serve hundreds of billions request a month</li>
+            <li>Contains over 3000 popular Javascript libraries</li>
+            <li>Millions of developers visit the site per year</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Electronic Frontier Foundation</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2014 - 2016</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Developer</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Hired to take EFF's campaigning to the next level by building an
+          action centre in Ruby on Rails. The action centre is built around some
+          large open source tools that lower the barrier to entry when
+          contacting congress.
+          <ul class="mt-2 list-inside list-disc">
+            <li>Developed new tools for contacting congress</li>
+            <li>
+              Brainstormed campaign ideas to raise maximum awareness about
+              issues
+            </li>
+            <li>Lots of social networking integration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Earbits</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2013 - 2015</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">CTO</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Started off as a front end developer but took on the role of CTO in
+          early 2013. The application frontend is built with Javascript and
+          organized as a single page application that talks to a collection of
+          Rails web servers which are connected to MongoDB.
+          <ul class="mt-2 list-inside list-disc">
+            <li>Managed a small team of developers and designers</li>
+            <li>Built the entire frontend application with Backbone.js</li>
+            <li>Transferred all of the infrastructure from Heroku to AWS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">JSON Resume</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2014 - Present</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Founder</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          JSON Resume is a community driven open source initiative to create a
+          JSON based standard for resumes. There is no reason why there can't be
+          a common standard for writing a resume that can be extended with an
+          ecosystem of open source tools.
+          <ul class="mt-2 list-inside list-disc">
+            <li>This resume is built with JSON Resume</li>
+            <li>Over 3000 stars on Github</li>
+            <li>Community developed themes</li>
+            <li>Tens of thousands of users</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Taskforce.is</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2013 - 2016</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Developer</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Worked on many politically charged campaigns against mass
+          surveillance. Not only technically challenging work but also a lot of
+          networking and getting my hands dirty with politics. Our biggest
+          project was "TheDayWeFightBack"..
+          <ul class="mt-2 list-inside list-disc">
+            <li>Generated 37,000,000 banner views</li>
+            <li>100, 000 phone calls to congress</li>
+            <li>500, 000 emails</li>
+            <li>250, 000 signatures</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Drone Hire</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2013 - Present</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Co-Founder</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          An international directory of civilian drone / UAV operators for hire.
+          Services include aerial photography, aerial video, mapping, surveying,
+          precision agriculture, real estate photography, remote inspections and
+          infrared imaging. Our plan is to be the place to go when looking for
+          UAV/Drone services. The website is built in Backbone.js and API is
+          built with Node.js and Postgres.
+          <ul class="mt-2 list-inside list-disc">
+            <li>
+              The site and blog combined have managed to receive over 200,000
+              visitors in 2014.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">BackboneTutorials.com</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2011 - 2014</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Founder</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          I write tutorials and blog post regarding the popular Javascript
+          framework Backbone.js. The tutorials cover a range of topics regarding
+          front end development aimed at beginners, experts and anyone in
+          between.
+          <ul class="mt-2 list-inside list-disc">
+            <li>Over two million unique visitors a year</li>
+            <li>25,000+ ebook downloads</li>
+            <li>300,000+ Youtube views</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3
+              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
+            >
+              <a class="hover:underline">Ephox</a
+              ><span class="inline-flex gap-x-1"></span>
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2011 - 2012</div>
+          </div>
+          <h4 class="font-mono text-sm leading-none">Front-end Developer</h4>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Ephox is a worldwide company who is heavily involved with the
+          development of TinyMce and enterprise editors. My primary role
+          included building front-end widgets and applications. Worked on a
+          major product using Backbone.js as a base. Heavily involved in UI/UX
+          design and wire-framing. Also spend a lot of time designing API
+          specifications and documentation.
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">Education</h2>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3 class="font-semibold leading-none">
+              The University of Queensland
+            </h3>
+            <div class="text-sm tabular-nums text-gray-500">2008 - 2009</div>
+          </div>
+        </div>
+        <div class="text-pretty font-mono text-sm text-muted-foreground mt-2">
+          <div>
+            Bachelors<!-- -->,
+            <!-- -->Software Engineering (incomplete)
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">Skills</h2>
+      <div class="flex flex-wrap gap-1">
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Frontend
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          HTML / JSX
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          SCSS / CSS / BEM / Styled Components
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Javascript / Typescript
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          React / Next
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Redux / Apollo
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Backend
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Node
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Ruby
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Python
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Postgres
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Redis
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Serverless
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Devops
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          AWS
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          G Cloud
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Heroku
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+        >
+          Caching
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">Awards</h2>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <div class="flex items-center justify-between gap-x-2 text-base">
+            <h3 class="font-semibold leading-none">Defender of the Internet</h3>
+          </div>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Fight For The Future<!-- -->
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">Interests</h2>
+      <div class="flex flex-wrap gap-1">
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Gardening
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Music / Jamming
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Reading / Writing
+        </div>
+        <div
+          class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 align-middle text-xs"
+        >
+          Open Source
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-0 flex-col gap-y-3">
+      <h2 class="text-xl font-bold">References</h2>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <h3 class="font-semibold leading-none">
+            Joey Flores, Co-founder and CEO of Earbits, Inc.
+          </h3>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Thomas was hired as a lead developer and, upon the leaving of our
+          co-founder took over as CTO of Earbits. Thomas is, hands down, one of
+          those A Players you hear of companies dying to hire. He is incredibly
+          smart, not just at code but about everything from classical music to
+          Chinese language and culture. Thomas is great to work with and, as a
+          well established contributor to open source projects and several
+          successful ventures, commands the respect of engineers at all levels.
+          I would suggest doing anything you can to have him on your team.
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <h3 class="font-semibold leading-none">
+            Yotam Rosenbaum, SVP of Operations, Earbits, Inc.
+          </h3>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          I've had the great pleasure of working with Thomas for the past three
+          years at Earbits, and on a few side projects. Two years ago our CTO
+          left on a moment's notice, Thomas saved our company by quickly
+          stepping up to fill this role. He has been with our company through
+          thick and thin and made serious personal sacrifices in order to help
+          the company during tough times. He is a phenomenal hacker and a true
+          team player. Highly recommended!
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <h3 class="font-semibold leading-none">
+            Ryan Kirkman, Senior Software Engineer at Nerdwallet
+          </h3>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          Thomas is an extremely talented engineer with a very broad range of
+          skills and experience. From being a thought leader in the front-end
+          community via backbonetutorials.com and cdnjs.com, to designing and
+          implementing the API for cdnjs.com, working with Thomas has been
+          fantastic learning experience. Thomas is truly a full stack develop,
+          and his work output is incredible. If there is any opportunity to work
+          with Thomas, I take it. He is the definition of an A player.
+        </div>
+      </div>
+      <div class="rounded-lg bg-card text-card-foreground">
+        <div class="flex flex-col space-y-1.5">
+          <h3 class="font-semibold leading-none">Greg Davis</h3>
+        </div>
+        <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
+          On Thomas Davis... Hire this guy. Do not be fooled. Incredibly capable
+          and fast. Plays well with others. Unbelievable at front-end work end
+          programming but that is just the start. Visionary. Hire him before I
+          do.
+        </div>
+      </div>
+    </section>
+  </section>
+  <p
+    class="fixed bottom-0 left-0 right-0 border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden"
+  >
+    Press<!-- -->
+    <kbd
+      class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100"
+      ><span class="text-xs">⌘</span>J</kbd
+    >
+    <!-- -->to open the command menu. Hosted by
+    <a href="/" class="underline hover:opacity-80">jcv</a>.
+  </p>
 </main>
 {% endblock %}
