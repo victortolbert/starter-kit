@@ -16,11 +16,11 @@ start designing in the browser without requiring extensive front-end expertise.
 ### Developers
 
 - Salesforce
-- Wordpress
-- Vue
+- WordPress
+- Vue.js
 - Alpine.js
 
-## Examples of Current and formerly popular Vue Component API approaches
+## Examples of current and formerly popular Vue.js component API approaches
 
 - Options API
 - Class Component API

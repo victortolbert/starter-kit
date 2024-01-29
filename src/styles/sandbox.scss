@@ -1,0 +1,123 @@
+:root {
+  --font-size-base: 1rem;
+  --font-size-biggish: 1.75rem;
+  --font-size-big: 2.25rem;
+
+  --ratio: 1.5;
+
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+/* elements */
+
+h3 {
+  font-size: var(--font-size-biggish);
+}
+
+h2 {
+  font-size: var(--font-size-big);
+}
+
+/* utilities */
+
+.font-size\:base {
+  font-size: var(--font-size-base) !important;
+}
+
+.font-size\:biggish {
+  font-size: var(--font-size-biggish) !important;
+}
+
+.font-size\:big {
+  font-size: var(--font-size-big) !important;
+}
+
+.wrapper {
+  --content-max-width: 1160px;
+  --padding-inline: 2rem;
+
+  width: min(var(--content-max-width), 100% - var(--padding-inline) * 2);
+  margin-inline: auto;
+}
+
+.wrapper-old {
+  padding: 0 2rem;
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+// .flow :not(:first-child) {
+//   // margin-block-start: 1rem;
+//   margin-top: 1em;
+// }
+
+// :where(.flow > :not(:first-child)) {
+//   // margin-block-start: 1rem;
+//   margin-top: 1em;
+// }
+
+// .stack > * + * {
+//   margin-block-start: 1.5rem;
+// }
+
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack * {
+  margin-block: 0;
+}
+
+.stack * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+
+.row {
+  display: flex;
+}
+
+.row > * {
+  flex: 1;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+// writing-mode: vertical-rl;
+
+.icon {
+  margin-inline-end: 0.5em;
+}

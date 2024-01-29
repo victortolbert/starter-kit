@@ -85,7 +85,12 @@ function styles() {
 }
 
 function views() {
-  return src(['src/views/**/*.html', '!src/views/**/_*.html'], { base: 'src/views' })
+  return src([
+    'src/views/**/*.njk',
+    'src/views/**/*.html',
+    '!src/views/**/_*.njk',
+    '!src/views/**/_*.html',
+  ], { base: 'src/views' })
     .pipe($.data(getData))
     .pipe($.nunjucks.compile())
     .pipe(dest('dist'))
