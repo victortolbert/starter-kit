@@ -1,7 +1,7 @@
 {
   "name": "@victortolbert/starter-kit",
   "version": "0.1.0",
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.15.9",
   "description": "Rapidly build prototypes using Gulp and Nunjucks",
   "author": "Victor Tolbert <victor.tolbert@gmail.com> (http://victortolbert.com/)",
   "license": "MIT",
@@ -89,7 +89,7 @@
     "gulp-uglify": "^3.0.2",
     "json5": "^2.2.3",
     "lint-staged": "^15.2.0",
-    "pnpm": "8.14.1",
+    "pnpm": "8.15.9",
     "postcss-lit": "^1.1.1",
     "prettier": "^3.2.4",
     "release-it": "^17.0.1",
