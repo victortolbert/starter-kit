@@ -38,7 +38,7 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "2.23.0-fix",
+    "@salesforce-ux/design-system": "2.25.3",
     "gulp-cli": "^2.3.0",
     "http-auth": "^4.2.0"
   },
